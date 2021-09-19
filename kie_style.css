@@ -1,0 +1,1115 @@
+@font-face {
+    font-family: amiri;
+    src: url('fonts/Amiri-Regular.woff') format('woff');
+}
+
+
+
+
+
+.kie_editor{
+      background-color: #23282d;
+    
+    
+    margin: 0;
+    padding: 1em;
+    border-radius: 1em;
+    border: solid 2px #9ea3a8;
+    position: relative;
+    min-width: 600px;
+    min-height: 500px;
+}
+#wpwrap {
+
+    overflow: scroll;
+}
+.konvajs-content > canvas{
+    /* background: #fffffff2 !important; */
+}
+.kie_editor > .panel{
+    padding: 0;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    background-color: #15181b;
+    left: 0;
+    text-align: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+
+}
+.kie_msg {
+    position: fixed;
+    background-color: #8bc34afc;
+    width: 80%;
+    padding: 1em;
+    border: solid 2px #fcfeff;
+    border-radius: 0.5em;
+    color: white;
+    display: none;
+    border-style: dashed;
+    z-index: 999;
+}
+.kie_msg > .kie_msg_header {
+    text-align: center;
+    background-color: #89c049;
+    border-radius: 2em;
+    padding: 0.8em;
+    width: 37%;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: -23px;
+    color: white;
+    border: solid 2px white;
+    border-style: dashed;
+}
+.kie_msg  > span{
+    position: absolute;
+    cursor: pointer;
+    right: 8px;
+    top: 9px;
+}
+.kie_msg > .kie_msg_header > b{
+    
+}
+.kie_msg > .kie_msg_mtn {
+    text-align: center;
+    font-family: font7;
+    font-size: 1em;
+    background-color: #1f1e1e2e;
+    padding: 1em;
+    color: white;
+    border-radius: 0.5em;
+    /* border: solid 2px #ffffff; */
+    /* border-style: dashed;*/
+}
+.kie_editor > .panel > .eyedroper{
+        position: absolute;
+    left: 6px;
+    bottom: 4px;
+    height: 2em;
+    width: 2em;
+    border: 0 black dashed;
+    border-radius: 0.3em;
+}
+.kie_editor > .panel > .eyedroper_text{
+position: absolute;
+    left: 38px;
+    bottom: 0;
+    height: 17px !important;
+    width: 66px;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: 0.8em;
+    text-align: center;
+    overflow: scroll;
+    max-height: 20px;
+    color: gray;
+}
+.kie_editor > .panelr{
+padding: 0;
+    position: absolute;
+    top: -0;
+    width: 200px;
+    background-color: #15181b;
+    left: 0;
+    text-align: center;
+    height: 92%;
+    border-top-right-radius: 1em;
+
+}
+.kie_editor > .svgeditor_form{
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    background-color: #15181b !important;
+    left: 0;
+    text-align: center;
+    min-height: 80%;
+    height: 90% !important;
+    border-radius: 0 0 1em 1em;
+    border: 0;
+    overflow-y: scroll;
+    z-index: 9;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+}
+.kie_edito .image_preview{
+    max-width: 90%;
+    border: solid 3px white;
+    border-radius: 0.5em;
+    margin: auto;
+    cursor: pointer;
+}
+.kie_editor > .panel > .loading{
+    position: absolute;
+    margin-right: 1em;
+    right: 7px;
+    top: 7px;
+    
+}
+.kie_editor > .panel > .loading > img{
+    width: 32px !important;
+    height: 32px !important;
+}
+.kie_editor > .panell{
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    background-color: #15181b !important;
+    right: 0;
+    text-align: center;
+    min-height: 80%;
+    height: 90%;
+    border-radius: 0 0 1em 1em;
+    border: 0;
+    overflow-y: scroll;
+    z-index: 9;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+.kie_editor >  .editor_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #15181b;
+    z-index: 99999;
+    display: none;
+}
+.kie_editor > .editor_nav > ul {
+    text-align: center;
+}
+.kie_editor >  .editor_nav > ul > li {
+display: inline-block;
+    padding: 0.5em;
+    background-color: #24282d;
+    color: white;
+    margin-top: -0.8em;
+    border-radius: 0.5em;
+    border: solid 2px #394048;
+    cursor: pointer;
+
+}
+.kie_editor >  .editor_nav > ul > li:hover{
+border: solid 2px #8698ab;
+
+}
+.kie_editor > .svgeditor_form > .main_svg_code_editor > #svgeditor_form {}
+
+.kie_editor > .svgeditor_form  input{
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.kie_editor > .panelr >  .layers{
+padding: 0;
+    position: absolute;
+    bottom: 1%;
+    width: 90%;
+    background-color: #24282d;
+    right: 0;
+    text-align: center;
+    height: 50%;
+    border-radius: 1em;
+    margin-right: 5%;
+    
+
+}
+/* width */
+*::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background: #24282d;
+  }
+  
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: #616569;
+  }
+  
+  /* Handle on hover */
+  *::-webkit-scrollbar-thumb:hover {
+    background: #1e8cbe52;
+  }
+  /* input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    color: #a56eaf;
+    margin: 0;
+    background-color: aquamarine;
+    opacity: 0.1;
+    border-radius: 5em;
+    min-width: auto;
+  } */
+
+/* width */
+.kie_editor > .panelr >  .layers > ul::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.kie_editor > .panelr >  .layers > ul::-webkit-scrollbar-track {
+  background: #24282d;
+}
+
+/* Handle */
+.kie_editor > .panelr >  .layers > ul::-webkit-scrollbar-thumb {
+  background: #616569;
+}
+
+/* Handle on hover */
+.kie_editor > .panelr >  .layers > ul::-webkit-scrollbar-thumb:hover {
+  background: #1e8cbe52;
+}
+.kie_editor > .panelr > .layers > ul{
+    margin-top: 4em;
+        overflow-y: scroll;
+    height: 76%;
+}
+.kie_editor > .panelr > .layers > ul > li{
+    background-color: #253a4e;
+    color: white;
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    padding-top: 29px;
+    min-height: 50px;
+    display: list-item;
+}
+.kie_editor > .panelr > .layers > ul > li > div {
+        position: relative;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.kie_editor > .panelr > .layers > ul > li > .l_item {
+    background-color: #1f3142;
+    border-radius: 1em;
+    margin: 1em 0 1em 0;
+    cursor: crosshair;
+}
+.kie_editor > .panelr > .layers > ul > li > div > div {
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* background-color: #32373c; */
+    /* height: 28px; */
+}
+.kie_editor > .panelr > .layers > ul > li > div > div > span{
+    padding: 0;
+    background-color: #32373c;
+    margin-top: 0.5em;
+    color: #e5e5e5;
+    text-align: center;
+    font-size: 1em;
+}
+.kie_editor > .panelr > .layers > ul > li > div > div > span:hover{
+ color: cadetblue;
+}
+.konvajs-content{
+/*    margin-right: 30%;*/
+}
+.kie_editor > .panelr > .layers > .option_layres{
+    background-color: #32373c;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    border-radius: 1em 1em 0 0;
+}
+.kie_editor > .panelr > .layers > .option_layres > ul {
+    
+}
+.kie_editor > .panelr > .layers > .option_layres > ul > li{
+    display: inline;
+    padding: 0.5em;
+        font-size: 0.5em;
+        cursor: pointer;
+}
+.kie_editor > .panelr > p{
+width: 100%;
+    color: #a7a2a2;
+    text-align: center;
+
+}
+.kie_editor > .panel > ul {
+    
+}
+.kie_editor > .panel > ul > li{
+    display: inline;
+    padding: 1em;
+}
+.kie_editor > .panel > ul > li:hover{
+        display: inline;
+    padding: 1em;
+    background-color: #1a1d21fc;
+    border-radius: 5em;
+    color: #dddede;
+        cursor: pointer;
+}
+.kie_editor > .startpanel{
+    position: absolute;
+    width: 96%;
+    height: 50px;
+    top: 50%;
+    left: 3%;
+    padding: 0;
+}
+.kie_editor > .startpanel > .startbutton{
+    border: solid 3px #2f373e;
+    text-align: center;
+    background-color: #131619;
+    padding: 10px;
+    color: white;
+    border-radius: 0.3em;
+    min-height: 20px;
+        cursor: pointer;
+}
+.kie_editor > .startpanel > .startbutton > span{
+padding-top: 7px;
+}
+.kie_editor > .startpanel > .startbutton:hover{
+    border: solid 3px #2f373e;
+    text-align: center;
+    
+    background-color: #0b0c0e;
+    padding: 10px;
+    color: #005aff;
+    border-radius: 0.3em;
+
+}
+.kie_editor > .startpanel > .nameimage {
+    border: solid 3px #2f373e;
+    text-align: center;
+    background-color: #131619;
+    padding: 1em;
+    color: white;
+    border-radius: 0.3em;
+    height: 5px;
+    width: 50%;
+    margin-right: 0%;
+    margin-left: 25%;
+}
+.kie_editor > .startpanel > .wstage {
+    border: solid 3px #2f373e;
+    text-align: center;
+    background-color: #131619;
+    padding: 1em;
+    color: white;
+    border-radius: 0.3em;
+    height: 20px;
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 0.5em;
+}
+.kie_editor > .startpanel > .hstage{
+    border: solid 3px #2f373e;
+    text-align: center;
+    background-color: #131619;
+    padding: 1em;
+    color: white;
+    border-radius: 0.3em;
+    height: 20px;
+    width: 40%;
+}
+.kie_editor > .panelr > .option > input {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.kie_editor > .panelr > .option > select {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.kie_editor > .panelr > .shape_editor > input {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.kie_editor > .panelr > .shape_editor > form > input {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.kie_editor > .panelr > .shape_editor > .svgeditor_form > input {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.kie_editor > .panelr button:not(.tablinks){
+        width: 50%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: solid 2px #3a3f46;
+    padding: 0.5em 0.2em 0.8em 0.2em;
+    cursor: pointer;
+}
+.kie_editor > .panelr  button:hover{
+background-color: #383e46;
+}
+.kie_editor > .panell   button {
+    width: 50%;
+margin: 0.5em;
+background-color: #24282d;
+color: white;
+border-radius: 1em;
+border: solid 2px #3a3f46;
+padding: 0.5em 0.2em 0.8em 0.2em;
+cursor: pointer;
+}
+.kie_editor > .panell > .colorselctor > .list_color{
+    border-top: solid 2px #24282d;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+.kie_editor > .panell > .colorselctor  button {
+    width: 30px;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: solid 2px #3a3f46;
+    padding: 0.5em 0.2em 0.8em 0.2em;
+    cursor: pointer;
+    font-size: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.kie_editor > .panell  button:hover{
+background-color: #383e46;
+}
+.kie_editor > .panell > .gradselector  button {
+    width: 30px;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: solid 2px #3a3f46;
+    padding: 0.5em 0.2em 0.8em 0.2em;
+    cursor: pointer;
+    font-size: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.kie_editor > .panell > .fontselector  button {
+    width: 30px;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: solid 2px #3a3f46;
+    padding: 0.5em 0.2em 0.8em 0.2em;
+    cursor: pointer;
+    font-size: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.kie_editor > .panell > .fontselector .font_list {
+    overflow-y: scroll;
+    height: 300px;
+    border-top: solid 2px #24282d;
+    margin-top: 1em;
+}
+.kie_editor > .panell > .gradselector .grad_list {
+    overflow-y: scroll;
+    height: 300px;
+    border-top: solid 2px #24282d;
+    margin-top: 1em;
+}
+.kie_editor > .panell > .gradselector > .deg_code {
+    width: 30%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 0em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+}
+.grad_select_text{
+    min-width: 90%;
+    min-height: 50px;
+}
+
+.kie_editor > .panell > .gradselector > .grad_show{
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(180deg, #CDDC39, #4c520e);
+}
+.kie_editor > .panell > .gradselector > .grad_node_list{
+    width: 87%;
+    margin-right: 0%;
+    background-color: #24282d;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    border: solid 2px #3a3f46;
+}
+.kie_editor > .panell > .gradselector > .grad_node_list > .stop_color{
+    width: 100%;
+    position: relative;
+    height: 30px;
+    border: solid 1px #121315;
+    padding-top: 0.2em;
+    border-radius: 0.2em; 
+}
+.kie_editor > .panell > .gradselector > .grad_node_list > .stop_color > .color{
+    width: 28px;
+    height: 28px;
+    min-height: auto;
+    background-color: #24282d;
+    color: white;
+    position: absolute;
+    right: 40px;
+    top: 2px;
+    border: solid 1px #3e444c00;
+    border-radius: 0 !important;
+}
+.gradselector > .grad_list > .graditemitem {
+    width: 94%;
+    height: 60px;
+    margin: auto;
+    border-radius: 1em;
+    margin-top: 1em;
+    border: solid 2px #121315;
+    cursor: pointer;
+}
+.kie_editor > .panell > .gradselector > .grad_node_list > .stop_color > .color::-webkit-color-swatch {
+    border: solid 1px #15181b;
+    border-radius: 4px;
+}
+.kie_editor > .panell > .gradselector > .grad_node_list > .stop_color > .close{
+    position: absolute;
+    right: 5px;
+    top: 19%;
+    border-left: solid 2px #1c1f23;
+    cursor: pointer;
+}
+.kie_editor > .panell > .gradselector > .grad_node_list > .stop_color > .pos{
+    width: 73px;
+    height: 28px;
+    min-height: auto;
+    background-color: #1c1f23;
+    color: white;
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    border: solid 1px #15181b4a;
+}
+.kie_editor > .panelr  input[type=color]{
+    width: 90%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    height: 38px;
+
+}
+.kie_editor > .panelr > .text_editor div{
+    /* width: 80%;
+    text-align: center;
+    margin-right: 10%;
+    background-color: #1b1c1d;
+    padding: 1em 0 1em 0;
+    border-radius: 0 0 1em 1em;
+    margin-top: -0.59em; */
+}
+.kie_editor > .panelr  input {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-left: 1em;
+
+}
+.kie_editor > .panelr  select {
+    width: 92%;
+    margin: 0.5em;
+    background-color: #24282d;
+    color: white;
+    border-radius: 1em;
+    border: none;
+    padding: 0.2em;
+    padding-left: 1em;
+}
+
+.kie_editor > .panelr > .text_editor  > .show_font_prive {
+color: white;
+    font-size: large;
+}
+
+
+
+.kie_editor > .panelr > .text_editor ,
+.kie_editor > .panelr > .shape_editor ,
+.kie_editor > .panelr > .pen_editor ,
+.kie_editor > .panelr > .option ,
+.kie_editor > .svgeditor_form,
+.kie_editor > .panelr > .text_editor,
+.kie_editor > .panelr > .layeroption,
+.kie_editor > .panelr > .image_editor {
+overflow-x: overlay;
+height: 46%;
+}
+/* width */
+.kie_editor > .panelr > .text_editor::-webkit-scrollbar ,
+.kie_editor > .panelr > .shape_editor::-webkit-scrollbar ,
+.kie_editor > .panelr > .pen_editor::-webkit-scrollbar ,
+.kie_editor > .panelr > .option::-webkit-scrollbar ,
+.kie_editor > .svgeditor_form::-webkit-scrollbar,
+.kie_editor > .panelr > .text_editor::-webkit-scrollbar,
+.kie_editor > .panelr > .layeroption::-webkit-scrollbar,
+.kie_editor > .panelr >.image_editor::-webkit-scrollbar{
+    width: 4px;
+  }
+  
+  /* Track */
+  .kie_editor > .panelr > .text_editor::-webkit-scrollbar-track ,
+  .kie_editor > .panelr > .shape_editor::-webkit-scrollbar-track ,
+  .kie_editor > .panelr > .pen_editor::-webkit-scrollbar-track ,
+  .kie_editor > .panelr > .option::-webkit-scrollbar-track ,
+  .kie_editor > .svgeditor_form::-webkit-scrollbar-track,
+  .kie_editor > .panelr > .text_editor::-webkit-scrollbar-track,
+  .kie_editor > .panelr > .layeroption::-webkit-scrollbar-track,
+  .kie_editor > .panelr >.image_editor::-webkit-scrollbar-track{
+    background: #24282d;
+    }
+
+  
+  /* Handle */
+.kie_editor > .panelr > .text_editor::-webkit-scrollbar-thumb ,
+.kie_editor > .panelr > .shape_editor::-webkit-scrollbar-thumb ,
+.kie_editor > .panelr > .pen_editor::-webkit-scrollbar-thumb ,
+.kie_editor > .panelr > .option::-webkit-scrollbar-thumb ,
+.kie_editor > .svgeditor_form::-webkit-scrollbar-thumb,
+.kie_editor > .panelr > .layeroption::-webkit-scrollbar-thumb,
+.kie_editor > .panelr > .text_editor::-webkit-scrollbar-thumb,
+.kie_editor > .panelr >.image_editor::-webkit-scrollbar-thumb{
+background: #616569;
+}
+  
+  /* Handle on hover */
+.kie_editor > .panelr > .text_editor::-webkit-scrollbar-thumb:hover ,
+.kie_editor > .panelr > .shape_editor::-webkit-scrollbar-thumb:hover ,
+.kie_editor > .panelr > .pen_editor::-webkit-scrollbar-thumb:hover ,
+.kie_editor > .panelr > .option::-webkit-scrollbar-thumb:hover ,
+.kie_editor > .svgeditor_form::-webkit-scrollbar-thumb:hover,
+.kie_editor > .panelr > .layeroption::-webkit-scrollbar-thumb:hover ,
+.kie_editor > .panelr > .text_editor::-webkit-scrollbar-thumb:hover ,
+.kie_editor > .panelr >.image_editor::-webkit-scrollbar-thumb:hover{
+    background: #1e8cbe52;
+}
+
+
+
+.kie_editor > .panelr > .image_editor > .misha-upl > input{
+  width: 90%;
+    font-size: smaller;
+    word-break: break-all;
+    height: 17px;
+}
+a[class=removeitembtn] {
+    color: #444444;
+    position: absolute;
+    left: -35px;
+    top: 45px;
+    background-color: #b4b9be;
+    width: 29px;
+    height: 28px;
+    border-radius: 0.5em 0 0 0.5em;
+    padding: 0.2em;
+    border: solid 0px;
+    cursor: pointer;
+}
+a[class=removeitembtn] > span{
+    padding-top: 0.1em;
+}
+a[class=removeitembtn]:hover{
+    color: white;
+    background-color: #C62828;
+}
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+background: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: solid 1px #000; /*change color of the swatch border here*/
+	border-radius: 40px;
+}
+.svg_color {
+
+}
+.loadedsvg {
+    width: 50%;
+    border: solid 2px gray;
+        margin: 0em 0 1em 0;
+    padding: 1em;
+}
+.toplevel_page_kingIE > a > div > img{
+    width: 16px;
+}
+#svgeditor_form > .svg{
+    margin-top: 4em;
+}
+.svgeditor_form > .close_svg_form {
+    color: #ffffff;
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    border-radius: 5em;
+    padding: 4px 0 0 0px;
+    cursor: pointer;
+}
+.svgeditor_form > .close_svg_form > span {
+    font-size: 1em;
+}
+.panell > .colorselctor{
+    margin-top: 2em;
+}
+.panell > .colorselctor .coloritem {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 1em;
+    cursor: pointer;
+    border: solid 2px #24282d;
+}
+.panell > .close {
+    color: #444444;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    padding: 4px 0 0 0px;
+    cursor: pointer;
+    background: #b4b9be;
+}
+.panell > .close > span {
+    font-size: 1em;
+}
+.svgeform .input_label{
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+.kie_editor > .panelr  p{
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'font2';
+    line-height: 1em;
+}
+/* Style the tab */
+.tab {
+    width: 100%;
+    background-color: #24282d;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1em 0.5em 1em 0.5em;
+    transition: 0.3s;
+    display: inline-block;
+    color: white;
+    /* margin-left: -5px !important; */
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: transparent !important;
+    color: #E91E63;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #15181b;
+    color: #444444;
+    border-radius: 1em 1em 0 0;
+    /* margin-top: 0.2em; */
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+  p.show_font_prive {
+    color: white;
+    font-size: 1.5em !important;
+    cursor: pointer;
+}
+.fontselector > .font_list > p.fontitem {
+    width: 90%;
+    min-height: 32px;
+    font-size: 1.2em;
+    border: solid 2px #32373c;
+    border-radius: 0.5em;
+    padding-top: 0.5em;
+    color: white;
+    cursor: pointer;
+    margin-right: 4%;
+}
+.fontselector > p.font_preview {
+    font-size: 1.8em;
+    color: white;
+    border: solid 2px gray;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+.kie_editor .splash_screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'amiri';
+    
+}
+.kie_editor .splash_screen > .title {
+    font-size: 8em;
+    color: #FFC107;
+    width: 100%;
+    text-align: center;
+    height: 43%;
+    padding-top: 20%;
+    padding-bottom: 45px;
+    text-shadow: 1px 1px 9px #E91E63;
+}
+.kie_editor .splash_screen > .wait {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.kie_editor .splash_screen > .wait img {
+    height: 100%;
+}
+.kie_editor .splash_screen > .discription {
+    text-align: center;
+    color: white;
+    display: none;
+}
+.kie_editor > .panel_left{
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #15181b;
+    right: 0;
+    text-align: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    height: 90%;
+    width: 50px;
+}
+.kie_editor > .panel_left > ul {
+    
+}
+.kie_editor > .panel_left > ul > li{
+    padding: 1em;
+}
+.kie_editor > .panel_left > ul > li:hover{
+      
+    padding: 1em;
+    background-color: #1a1d21fc;
+    border-radius: 5em;
+    color: #dddede;
+        cursor: pointer;
+}
+.kie_editor > .kie_blackscreen{
+position: absolute;
+    background-color: #23282d;
+    width: 100%;
+    padding: 0;
+    border: solid 2px #fcfeff;
+    border-radius: 0.5em;
+    color: white;
+    border-style: dashed;
+    z-index: 999;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+
+}
+.kie_editor > .kie_blackscreen > .wait{
+    position: absolute;
+    top: 50%;
+    left: 47%;
+}
+.kie_editor > .kie_blackscreen > .wait > img{
+      width: 50px;  
+}
+.kie_editor > .startpanel > .open_file{
+font-size: 6.5em;
+    width: 100%;
+    height: 90px;
+    color: #63777c;
+    cursor: pointer;
+}
+.kie_editor > .startpanel > .open_file:hover{
+color: #131619;
+}
+#menu {
+        display: none;
+        position: absolute;
+        width: 60px;
+        background-color: white;
+        box-shadow: 0 0 5px grey;
+        border-radius: 3px;
+      }
+
+      #menu button {
+        width: 100%;
+        background-color: white;
+        border: none;
+        margin: 0;
+        padding: 10px;
+      }
+
+      #menu button:hover {
+        background-color: lightgray;
+      }
+
+.lgroup_item {
+   
+    display: list-item;
+    position: revert !important;
+    padding-top: 0.2em;
+    background-color: #223548 !important;
+    border-radius: 0.4em;
+    margin-top: 0.5em;
+    width: 80% !important;
+    margin-right: 10%;
+    margin-left: 10%;
+    border: solid 2px gray;
+}
+.lgroup {
+background-color: #24282d !important;
+    position: relative !important;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
+
+    width: 100%;
+    cursor: pointer;
+}
+.tgroup{
+	position: relative !important;
+    background-color: unset !important;
+ 
+}
+.header_layer{
+	    position: relative;
+ 
+    width: 100%;
+    cursor: pointer;
+}
+
+.tgroup > .plus{
+margin: 0 !important;
+    text-align: center !important;
+    padding-top: 0.5em !important;
+    width: 26px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: -2px;
+    border-radius: 1em;
+    border: solid 1px;
+    font-size: 0.8em !important;
+
+}
+.tgroup > .minus{
+margin: 0 !important;
+    text-align: center !important;
+    padding-top: 0.5em !important;
+    width: 26px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: -2px;
+    border-radius: 1em;
+    border: solid 1px;
+    font-size: 0.8em !important;
+
+}
+.tgroup > .select_item{
+left: 5px;
+    margin: 0 !important;
+    text-align: center !important;
+    padding-top: 0.5em !important;
+    width: 26px;
+    height: 16px;
+    position: absolute;
+    top: -2px;
+    border-radius: 1em;
+    border: solid 1px #22282d;
+    font-size: 0.8em !important;
+
+}

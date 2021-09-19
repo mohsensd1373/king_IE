@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+    height="100" viewBox="0 0 150 100">
+    <line id="line1" class="line" x1="0" y1="80" x2="100" y2="20"  stroke="#444444" stroke-width="2"
+        pathLength="0" opacity="1" stroke-opacity="1" style="" display="" filter=""  clip-path=""/>
+</svg>

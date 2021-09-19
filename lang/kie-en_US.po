@@ -1,0 +1,366 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: king_IE\n"
+"POT-Creation-Date: 2020-12-22 22:13+0330\n"
+"PO-Revision-Date: 2020-12-22 22:14+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: king_IE.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: king_IE.php:24 king_IE.php:25
+msgid "تصویر ساز"
+msgstr "Image Maker"
+
+#: king_IE.php:71
+msgid "گروه جدید"
+msgstr "new group"
+
+#: king_IE.php:72
+msgid "جدا کردن از گروه"
+msgstr "Separation from the group"
+
+#: king_IE.php:73
+#, fuzzy
+msgid "ملغی کردن گروه"
+msgstr "Cancel group"
+
+#: king_IE.php:74
+msgid "حذف"
+msgstr "remove"
+
+#: king_IE.php:82 king_IE.php:87 king_IE.php:155
+msgid "نام فایل"
+msgstr "File name"
+
+#: king_IE.php:89
+msgid "تایید"
+msgstr "Ok"
+
+#: king_IE.php:90
+msgid "عرض"
+msgstr "Width"
+
+#: king_IE.php:91 king_IE.php:183
+msgid "ارتفاع"
+msgstr "Height"
+
+#: king_IE.php:98 king_IE.php:250 king_IE.php:402
+msgid "شفافیت"
+msgstr "opacity"
+
+#: king_IE.php:102 king_IE.php:108 king_IE.php:308 king_IE.php:314
+msgid "رنگ"
+msgstr "Color"
+
+#: king_IE.php:103 king_IE.php:309
+msgid "گرادینت خطی"
+msgstr "Linear gradient"
+
+#: king_IE.php:105 king_IE.php:311
+msgid "تصویر"
+msgstr "Image"
+
+#: king_IE.php:112 king_IE.php:318
+msgid "انتخاب تصویر"
+msgstr "Image selection"
+
+#: king_IE.php:116 king_IE.php:322
+msgid "بدون تکرار"
+msgstr "No-repeat"
+
+#: king_IE.php:117 king_IE.php:323
+msgid "تکرار هر جهت"
+msgstr "Repeat All"
+
+#: king_IE.php:118 king_IE.php:324
+msgid "فقط جهت y"
+msgstr "Repeat X"
+
+#: king_IE.php:119 king_IE.php:325
+msgid "فقط جهت x"
+msgstr "Repeat Y"
+
+#: king_IE.php:123 king_IE.php:176 king_IE.php:329
+msgid "x"
+msgstr "x"
+
+#: king_IE.php:125 king_IE.php:178 king_IE.php:331
+msgid "y"
+msgstr "y"
+
+#: king_IE.php:128 king_IE.php:334
+msgid "x افست"
+msgstr "offset X"
+
+#: king_IE.php:130 king_IE.php:336
+msgid "y افست"
+msgstr "offset Y"
+
+#: king_IE.php:133 king_IE.php:339
+msgid "x مقیاس در"
+msgstr "scale X"
+
+#: king_IE.php:135 king_IE.php:341
+msgid "y مقیاس در"
+msgstr "scale Y"
+
+#: king_IE.php:138 king_IE.php:344
+msgid "چرخش"
+msgstr "Rotation"
+
+#: king_IE.php:181
+msgid "طول"
+msgstr "Width"
+
+#: king_IE.php:187
+msgid "فونت"
+msgstr "Font"
+
+#: king_IE.php:214
+msgid "نوع قلم Font Style"
+msgstr "Font Style 123456789"
+
+#: king_IE.php:219
+msgid "استایل فونت"
+msgstr "Font Style"
+
+#: king_IE.php:221 king_IE.php:238 king_IE.php:254
+msgid "معمولی"
+msgstr "Normal"
+
+#: king_IE.php:222
+msgid "توپُر"
+msgstr "Bold"
+
+#: king_IE.php:223
+msgid "کج"
+msgstr "Italic"
+
+#: king_IE.php:225
+msgid "جهت نوشته"
+msgstr "Align"
+
+#: king_IE.php:227
+msgid "راست"
+msgstr "Right"
+
+#: king_IE.php:228 king_IE.php:233
+msgid "وسط"
+msgstr "Center"
+
+#: king_IE.php:229
+msgid "چپ"
+msgstr "Left"
+
+#: king_IE.php:232
+msgid "بالا"
+msgstr "Up"
+
+#: king_IE.php:234
+msgid "پایین"
+msgstr "Down"
+
+#: king_IE.php:236
+msgid "خط دار بودن نوشته"
+msgstr "Text Decoration"
+
+#: king_IE.php:239
+msgid "زیرخط"
+msgstr "Underline"
+
+#: king_IE.php:240
+msgid "خط وسط"
+msgstr "Line through"
+
+#: king_IE.php:252
+msgid "نوع حروف"
+msgstr "Font Variant"
+
+#: king_IE.php:255
+msgid "حروف کوچک"
+msgstr "Small Caps"
+
+#: king_IE.php:257
+msgid "شکسته شدن"
+msgstr "wrap"
+
+#: king_IE.php:259
+msgid "بی اثر"
+msgstr "None"
+
+#: king_IE.php:260
+msgid "کاراکتر"
+msgstr "char"
+
+#: king_IE.php:261
+msgid "کلمه"
+msgstr "Word"
+
+#: king_IE.php:263
+msgid "لفاف یا فاصله از طراف"
+msgstr "padding"
+
+#: king_IE.php:265
+msgid "ارتفاع خط"
+msgstr "line Height"
+
+#: king_IE.php:275
+msgid "حاشیه"
+msgstr "stroke"
+
+#: king_IE.php:279 king_IE.php:396
+msgid "صاف"
+msgstr "miter"
+
+#: king_IE.php:280 king_IE.php:285 king_IE.php:394
+msgid "گرد"
+msgstr "round"
+
+#: king_IE.php:281 king_IE.php:395
+msgid "مورب"
+msgstr "bevel"
+
+#: king_IE.php:284
+msgid "کپل"
+msgstr "butt"
+
+#: king_IE.php:286
+msgid "مربع"
+msgstr "square"
+
+#: king_IE.php:288
+msgid "سایه"
+msgstr "shadow"
+
+#: king_IE.php:291 king_IE.php:407
+msgid "جهت سایته در محور x"
+msgstr "shadow Offset X"
+
+#: king_IE.php:293 king_IE.php:409
+msgid "جهت سایه در محور y"
+msgstr "shadow Offset Y"
+
+#: king_IE.php:295 king_IE.php:411
+msgid "مات سایه"
+msgstr "shadow Blur"
+
+#: king_IE.php:297 king_IE.php:404
+msgid "شفافیت سایه"
+msgstr "shadow Opacity"
+
+#: king_IE.php:378
+msgid "ویرایش عکس"
+msgstr "Photo editing"
+
+#: king_IE.php:392
+msgid "نوع حاشیه"
+msgstr "line Join"
+
+#: king_IE.php:398
+msgid "رنگ حاشیه"
+msgstr "stroke color"
+
+#: king_IE.php:400
+msgid "اندازه حاشیه"
+msgstr "stroke Width"
+
+#: king_IE.php:413
+msgid "رنگ سایه"
+msgstr "shadow Color"
+
+#: king_IE.php:424
+msgid "تنظیمات قلمو"
+msgstr "Brush settings"
+
+#: king_IE.php:429
+msgid "قلمو"
+msgstr "brush"
+
+#: king_IE.php:430
+msgid "پاک کن"
+msgstr "eraser"
+
+#: king_IE.php:445
+msgid "انتخاب SVG"
+msgstr "Select SVG"
+
+#: king_IE.php:446
+msgid "ویرایش کد"
+msgstr "Edit code"
+
+#: king_IE.php:457
+msgid "شکل ها"
+msgstr "shapes"
+
+#: king_IE.php:917
+msgid "نوشته"
+msgstr "Text"
+
+#: king_IE.php:918
+msgid "کپی شد"
+msgstr "Copied"
+
+#: king_IE.php:919
+msgid "ذخیره شد"
+msgstr "Saved"
+
+#: king_IE.php:920
+msgid "تصویر شما با موفقیت در گالری ذخیره شد"
+msgstr "Your image has been successfully saved to the gallery"
+
+#. Plugin Name of the plugin/theme
+msgid "king_IE"
+msgstr "king_IE"
+
+#. Plugin URI of the plugin/theme
+msgid "http://kingblack.ir"
+msgstr "http://kingblack.ir"
+
+#. Description of the plugin/theme
+msgid "تصویر ساز قدرتمند  شاه سیاه"
+msgstr "Powerful illustrator kingblack"
+
+#. Author of the plugin/theme
+msgid "سید محسن سادات رسول"
+msgstr "Seyed Mohsen Sadat Rasool"
+
+#. Author URI of the plugin/theme
+msgid "http://kingblack.ir/"
+msgstr "http://kingblack.ir/"
+
+#~ msgid "x مقیاس در "
+#~ msgstr "scale X"
+
+#~ msgid "y مقیاس در "
+#~ msgstr "scale Y"
+
+#, fuzzy
+#~| msgid "ارتفاع"
+#~ msgid "ارتفاع "
+#~ msgstr "Height"
+
+#~ msgid "مورب "
+#~ msgstr "bevel"
+
+#~ msgid "ویرایش نوشته"
+#~ msgstr "Text editing"
+
+#~ msgid "بازنگری"
+#~ msgstr "review"
+
+#~ msgid "saiid mohsen sadat rasoll"
+#~ msgstr "Seyed Mohsen Sadat Rasool"
