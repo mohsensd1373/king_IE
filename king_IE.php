@@ -13,12 +13,14 @@ Domain Path: /lang/
 //Function short  Name  : KgIeMr
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
+//@
 function KgIeMr_textdomain() {
   load_plugin_textdomain( 'kie', false, basename( dirname( __FILE__ ) ) . '/lang' ); 
 }
-
 add_action( 'init', 'KgIeMr_textdomain' );
+//@ end
 
+//@ add to admin menu
 function KgIeMr_menu() {
 		add_menu_page(
 			__( 'تصویر ساز', 'kie' ),
@@ -29,11 +31,10 @@ function KgIeMr_menu() {
 			plugins_url('icon.png',__FILE__),3
 		);
    
-	}
-
-	add_action( 'admin_menu', 'KgIeMr_menu' );
-
-
+  }
+  add_action( 'admin_menu', 'KgIeMr_menu' );
+//@ 
+//@  html page
 	function KgIeMr_menu_page_contents() {
     $json_font=KgIeMr_font("update","","","");
     
@@ -83,7 +84,7 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
 
   </div>
   <div class="startpanel" style="display:none">
-     <span onclick="stage_action('opendialog')" class="dashicons dashicons-open-folder open_file"></span>
+     <span title="<?php _e( 'بازکردن فایل', 'kie' ) ?>" onclick="stage_action('opendialog')" class="dashicons dashicons-open-folder open_file"></span>
     <input type="text" class="nameimage" placeholder="<?php _e( 'نام فایل', 'kie' ) ?>"
       oninput="localStorage.setItem('namefile',this.value)">
     <a class="startbutton" onclick="setdivsize()"><?php _e( 'تایید', 'kie' ) ?></a>
@@ -465,11 +466,11 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
     <div class="layers">
       <div class="option_layres">
         <ul>
-          <li onclick="add_layer()"><span class="dashicons dashicons-plus"></span></li>
-          <li><span onclick="remove_curent_layer()" class="dashicons dashicons-minus"></span></li>
-          <li><span onclick="clonecurrentitem()" class="dashicons dashicons-admin-page"></span></li>
-          <li><span onclick="move_up_c_item()" class="dashicons dashicons-arrow-up-alt"></span></li>
-          <li><span onclick="move_down_c_item()" class="dashicons dashicons-arrow-down-alt"></span></li>
+          <li title="<?php _e( 'لایه جدید', 'kie' ) ?>" onclick="add_layer()"><span class="dashicons dashicons-plus"></span></li>
+          <li title="<?php _e( 'حذف لایه کنونی', 'kie' ) ?>"><span onclick="remove_curent_layer()" class="dashicons dashicons-minus"></span></li>
+          <li title="<?php _e( 'ساخت مشابه', 'kie' ) ?>" ><span onclick="clonecurrentitem()" class="dashicons dashicons-admin-page"></span></li>
+          <li title="<?php _e( 'بالا بردن لایه', 'kie' ) ?>"><span onclick="move_up_c_item()" class="dashicons dashicons-arrow-up-alt"></span></li>
+          <li title="<?php _e( 'پایین بدن لایه', 'kie' ) ?>"><span onclick="move_down_c_item()" class="dashicons dashicons-arrow-down-alt"></span></li>
         </ul>
       </div>
       <ul>
@@ -499,9 +500,9 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
         class="dashicons dashicons-no"></span></a>
     <div class="colorselctor">
       <input type="color" class="newcolor_input" style="width: 80%;">
-      <button onclick="addnewcolor('newcolor')"><span class="dashicons dashicons-insert"></span></button>
-      <button onclick="select_color()"><span class="dashicons dashicons-yes"></span></button>
-      <button onclick="addnewcolor('removecolor')"><span class="dashicons dashicons-trash"></span></button>
+      <button title="<?php _e( 'اضافه کردن رنگ به لیست ', 'kie' ) ?>" onclick="addnewcolor('newcolor')"><span class="dashicons dashicons-insert"></span></button>
+      <button title="<?php _e( 'انتخاب رنگ', 'kie' ) ?>" onclick="select_color()"><span class="dashicons dashicons-yes"></span></button>
+      <button title="<?php _e( 'حذف رنگ', 'kie' ) ?>" onclick="addnewcolor('removecolor')"><span class="dashicons dashicons-trash"></span></button>
       <div class="list_color">
         <div class="coloritem" style="background-color: #f44336!important;"></div>
         <div class="coloritem" style="background-color: #e91e63!important;"></div>
@@ -513,10 +514,10 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
     <div class="gradselector">
       <div class="grad_show" style="background-image: linear-gradient(rgb(73, 156, 234) 0%, rgb(32, 124, 229) 100%);">
       </div>
-      <button onclick="addnewgrad('newcolor')"><span class="dashicons dashicons-insert"></span></button>
-      <button onclick="select_grad()"><span class="dashicons dashicons-yes"></span></button>
-      <button onclick="call_grad('newgrad')"><span class="dashicons dashicons-download"></span></button>
-      <button onclick="call_grad('removecolor')"><span class="dashicons dashicons-trash"></span></button>
+      <button title="<?php _e( 'رنگ جدید', 'kie' ) ?>" onclick="addnewgrad('newcolor')"><span class="dashicons dashicons-insert"></span></button>
+      <button title="<?php _e( 'انتخاب', 'kie' ) ?>" onclick="select_grad()"><span class="dashicons dashicons-yes"></span></button>
+      <button title="<?php _e( 'اضافه کردن به لیست', 'kie' ) ?>" onclick="call_grad('newgrad')"><span class="dashicons dashicons-download"></span></button>
+      <button title="<?php _e( 'حذف', 'kie' ) ?>" onclick="call_grad('removecolor')"><span class="dashicons dashicons-trash"></span></button>
       <input class="grad_code" type="hidden" value="0,#499cea,1,#207ce5">
       <input class="css_grad_code" type="hidden">
       <input oninput="convert_gradlist_to_grad()" class="deg_code" type="number" min="-180" max="180" value="90">
@@ -570,14 +571,14 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
   <div class="panel" style="display: none;">
 
     <ul>
-      <li><span class="dashicons dashicons-yes" id="save" onclick="save_button()"></span></li>
-      <li><span class="dashicons dashicons-insert" id="new" onclick="new_button()"></span></li>
-      <li><span class="dashicons dashicons-carrot" id="shape" onclick="shape_button()"></span></li>
-      <li><span class="dashicons dashicons-admin-customizer" id="paint" onclick="paint_button()"></span></li>
+      <li title="<?php _e( 'ذخیره کردن تصویر', 'kie' ) ?>"><span class="dashicons dashicons-yes" id="save" onclick="save_button()"></span></li>
+      <li title="<?php _e( 'ایجاد یک فایل جدید ', 'kie' ) ?>"><span class="dashicons dashicons-insert" id="new" onclick="new_button()"></span></li>
+      <li title="<?php _e( 'شکل ها', 'kie' ) ?>" ><span class="dashicons dashicons-carrot" id="shape" onclick="shape_button()"></span></li>
+      <li title="<?php _e( 'نقاشی', 'kie' ) ?>"><span class="dashicons dashicons-admin-customizer" id="paint" onclick="paint_button()"></span></li>
       <!-- <li><span class="dashicons dashicons-image-filter" id="maineffect" onclick="maineffect_button()"></span></li> -->
-      <li><span class="dashicons dashicons-format-image" id="addimage" onclick="addimage_button()"></span></li>
-      <li><span class="dashicons dashicons-editor-textcolor" id="addtext" onclick="addtext_button()"></span></li>
-      <li><span class="dashicons dashicons-admin-tools" id="option" onclick="option_button()"></span></li>
+      <li title="<?php _e( 'تصویر', 'kie' ) ?>"><span class="dashicons dashicons-format-image" id="addimage" onclick="addimage_button()"></span></li>
+      <li title="<?php _e( 'نوشته', 'kie' ) ?>"><span class="dashicons dashicons-editor-textcolor" id="addtext" onclick="addtext_button()"></span></li>
+      <li title="<?php _e( 'تنظیمات', 'kie' ) ?>"><span class="dashicons dashicons-admin-tools" id="option" onclick="option_button()"></span></li>
     </ul>
     <!--<input class="eyedroper" type="text" onchange="color_code()" onclick="copy_color()" >-->
     <input class="eyedroper eyedroper_text" id="eyedroper_text" onclick="copy_color()" type="text">
@@ -589,9 +590,9 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
   <div class="panel_left" style="display:none;" >
 
     <ul>
-      <li><span class="dashicons dashicons-category"  onclick="stage_action('opendialog')" ></span></li>
-      <li><span class="dashicons dashicons-download" onclick="stage_action('save')"></span></li>
-      <li><span class="dashicons dashicons-superhero-alt" onclick="open_store()"></span></li>
+      <li title="<?php _e( 'بازکردن فایل', 'kie' ) ?>"><span class="dashicons dashicons-category"  onclick="stage_action('opendialog')" ></span></li>
+      <li title="<?php _e( 'ذخیره فایل', 'kie' ) ?>"><span class="dashicons dashicons-download" onclick="stage_action('save')"></span></li>
+      <li title="<?php _e( 'مخزن', 'kie' ) ?>"><span class="dashicons dashicons-superhero-alt" onclick="open_store()"></span></li>
       <!-- <li><span class="dashicons dashicons-admin-customizer" onclick="paint_button()"></span></li>
       <li><span class="dashicons dashicons-format-image"  onclick="addimage_button()"></span></li>
       <li><span class="dashicons dashicons-editor-textcolor"  onclick="addtext_button()"></span></li>
@@ -602,7 +603,10 @@ wp_style_add_data( 'King_kie_style', 'rtl', "replace" );
 
 </div>
 <?php
-	}
+  }
+  //@
+
+//@ allow use svg,svgz,woff in admin wordpress 
 add_filter('upload_mimes', 'KgIeMr_svg_up_allow');
 function KgIeMr_svg_up_allow ( $existing_mimes=array() ) {
     // add your extension to the mimes array as below
@@ -612,7 +616,8 @@ function KgIeMr_svg_up_allow ( $existing_mimes=array() ) {
 
     return $existing_mimes;
 }
-
+//@
+//@ fix  svg tumbnails in media center wordpress with set default width
 function KgIeMr_fix_svg_thumb_display() {
   echo '<style>
     .media-icon > img{ 
@@ -625,14 +630,16 @@ function KgIeMr_fix_svg_thumb_display() {
   </style>';
 }
 add_action('admin_head', 'KgIeMr_fix_svg_thumb_display');
-
+//@
+//@ add api for insert svg file 
 add_action('rest_api_init', function() {
 	register_rest_route('wp/v2', '/KgIeMr_svginsert/', array(
 	  'methods' => 'POST',
 	  'callback' => 'KgIeMr_svg_insert'
 	));
   });
-
+//@
+// get svg form api router and send to  save
   function KgIeMr_svg_insert($data){
 
 $filename=explode(".",$_POST['supporttitle']);
@@ -640,7 +647,8 @@ return KgIeMr_save_file( $_FILES['file'], sanitize_file_name($filename[0]) ,sani
  
       die();
 }
-
+//@
+//@ save file in wordpress
 function KgIeMr_save_file( $file, $name ,$filtype,$mimetype ) {
 if (!function_exists('wp_handle_upload')) {
            require_once(ABSPATH . 'wp-admin/includes/file.php');
@@ -694,12 +702,16 @@ if (!function_exists('wp_handle_upload')) {
 	
     
 }
+//@
+//@ api for get action 
 add_action('rest_api_init', function() {
 	register_rest_route('wp/v2', '/KgIeMr_action/', array(
 	  'methods' => 'POST',
 	  'callback' => 'KgIeMr_action'
 	));
   });
+//@
+//@ action center 
   function KgIeMr_action($data){
     if($_REQUEST['method']=="color"){
       return KgIeMr_newcolor($_REQUEST['action'],$_REQUEST['newcolor']);
@@ -712,7 +724,8 @@ add_action('rest_api_init', function() {
     }
 
   }
-
+//@
+//@ font action 
   function KgIeMr_font($action,$font_name,$font_url,$font_select_name){
     if(get_option('KgIeMr_font')!=true){
       $fontdata = array (
@@ -766,13 +779,16 @@ add_action('rest_api_init', function() {
     KgIeMr_write_css_file( $css );
     return json_encode($all_font);
   }
+  //@
+  //@ append font to page for show in editor 
   function KgIeMr_write_css_file( $css ) {   
     $file = plugin_dir_path( __FILE__ ) . 'fonts/kie_font.css'; 
     $open = fopen( $file, "w+" ); 
     $write = fputs( $open, $css ); 
     fclose( $open );
 }
-
+//@
+//@ gradiant action 
   function KgIeMr_newgrad($action,$new_konva_grad,$new_deg_grad){
     if(get_option('KgIeMr_allgrad')!=true){
       $graddata = array (
@@ -809,9 +825,9 @@ add_action('rest_api_init', function() {
     sort($all_grad);
     return json_encode($all_grad);
   }
+//@
 
-
-
+//@ color action 
   function KgIeMr_newcolor($action,$newcolor){
     if(get_option('KgIeMr_allcolor')!=true){
       $colordata = array("#000000","#C0C0C0","#808080","#FFFFFF","#FF00FF","#800080","#FF0000","#800000","#00FFFF","#008080","#0000FF","#000080","#008000","#00FF00");
@@ -839,22 +855,23 @@ add_action('rest_api_init', function() {
     $ret_color.="]";
     return stripslashes($ret_color);
   }
-
+//@
+//@ api for get image
 add_action('rest_api_init', function() {
 	register_rest_route('wp/v2', '/KgIeMr_newimage/', array(
 	  'methods' => 'POST',
 	  'callback' => 'KgIeMr_newimage_insert'
 	));
   });
-
+//@
+//@ insert image befor save image
   function KgIeMr_newimage_insert($data){
 
 	
 return KgIeMr_save_image( $_REQUEST['image_post'], sanitize_file_name($_REQUEST['filename']),KgIeMr_sanitize($_REQUEST['filtype']),KgIeMr_sanitize($_REQUEST['width']),KgIeMr_sanitize($_REQUEST['height'] ));
-
-
-  
 }
+//@
+//@ save image
 function KgIeMr_save_image( $base64_img, $name ,$filtype, $width ,$height ) {
   include( ABSPATH . 'wp-admin/includes/image.php' );
   require_once( ABSPATH . 'wp-admin/includes/post.php' );
@@ -911,8 +928,8 @@ if ($attach_data) {
 }
     
 }
-
-
+//@
+//@ append main js file to like konva.js 
 function KgIeMr_script() {
   if(isset($_REQUEST['page']) && $_REQUEST['page']=="kingIE" ){
     wp_enqueue_script( 'King_kie_script', plugins_url('konva.js', __FILE__), array('jquery') );
@@ -923,12 +940,14 @@ function KgIeMr_script() {
 }
 add_action( 'admin_enqueue_scripts', 'KgIeMr_script' );
 add_filter('admin_head', 'KgIeMr_script');
-//load media selector 
+//@
+//@load media selector 
 function KgIeMr_load_media_files() {
     wp_enqueue_media();
 }
 add_action( 'admin_enqueue_scripts', 'KgIeMr_load_media_files' );
-//load media selector 
+//@load media selector 
+//@ if plugin page register script 
 function KgIeMr_enqueue_my_scripts($hook) {
 
     if ( 'kingIE' == trim($_REQUEST['page'] )) {
@@ -952,10 +971,12 @@ function KgIeMr_enqueue_my_scripts($hook) {
 
 }
 add_action( 'admin_footer', 'KgIeMr_enqueue_my_scripts' );
-
+//@
+//@ remove mailcious code from string 
 function KgIeMr_sanitize ($sring){
     
   $valuere=htmlspecialchars($sring);
   $valuere=strip_tags($sring);
        return strip_tags($valuere);
   }
+  //@
